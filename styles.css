@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-style: normal;   
+}
+ 
+h1 {
+    font-size:3em;
+}
+
+body {
+    background-color: rgb(183, 183, 240);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+div > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(221, 235, 127);
+    border-radius: 5px;
+    border: solid black 1px;
+}
+
+#fortune {
+    display: flex;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 15%;
+}
+
+button{
+    border-radius: 5px;
+    padding: 1%;
+    font-size: 1.5em;
+    width: 60%;
+    margin: 2% 0;
+}
+
+button:hover {
+    background-color:rgb(221, 235, 127);
+}
+
+img {
+    margin: 2% 0;
+    width: 60%;
+    height: auto;
+    border-radius: 5px;
+    border: solid 1px black;
+}
+
+img:hover {
+    border-color: rgb(221, 235, 127)
+}
