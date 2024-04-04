@@ -1,60 +1,56 @@
-* {
-    box-sizing: border-box;
-    font-family: "Luckiest Guy", cursive;
-    font-weight: 400;
-    font-style: normal;   
-}
- 
-h1 {
-    font-size:3em;
-}
+/* Add your exciting and modern CSS styling here */
 
 body {
-    background-color: rgb(183, 183, 240);
+    background-color: #392f4b;
+    font-family: 'Workbench', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    
 }
 
-
-div > p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(221, 235, 127);
-    border-radius: 5px;
-    border: solid black 1px;
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
-#fortune {
-    display: flex;
-    margin: 0 auto;
-    font-size: 1em;
-    padding: 15%;
-}
-
-button{
-    border-radius: 5px;
-    padding: 1%;
-    font-size: 1.5em;
-    width: 60%;
-    margin: 2% 0;
+button {
+    background-color: #ff7272;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color:rgb(221, 235, 127);
+    background-color: #ff8f8f;
+}
+
+div {
+    display: none;
+    background-color: #5a4b78;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 0;
+    line-height: 1.5;
 }
 
 img {
-    margin: 2% 0;
-    width: 60%;
-    height: auto;
-    border-radius: 5px;
-    border: solid 1px black;
-}
-
-img:hover {
-    border-color: rgb(221, 235, 127)
+    margin-top: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }

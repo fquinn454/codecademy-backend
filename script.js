@@ -19,6 +19,7 @@ function getFortune(jobs, futures){
 
 function changeWidthInPercentage(percentage) {
     var fortuneParagraph = document.querySelector('div');
+    fortuneParagraph.style.display = "block";
     fortuneParagraph.style.width = percentage + '%'; // Set the width to your desired percentage
 }
 
@@ -26,6 +27,7 @@ function returnFortune(){
     const fortuneParagraph = document.getElementById("fortune")
     textToAdd = getFortune(jobs, futures);
     fortuneParagraph.innerText = textToAdd;
-    changeWidthInPercentage(60)
+    const fortuneParagraphDiv = document.querySelector('div');
+    fortuneParagraphDiv.style.display = "block";
 }
 
