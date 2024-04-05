@@ -13,7 +13,11 @@ function getFortune(jobs, futures){
     job = jobs[getRandom(jobs)];
     future = futures[getRandom(futures)];
     children = Math.floor(Math.random() * 8);
-    const fortune = `You will be a ${job}.\n You will have ${children} children.\n ${future} is in your future.`
+    if(children === 1){
+        let fortune = `You will be a ${job}.\n You will have ${children} child.\n ${future} is in your future.`
+        return fortune
+    }
+    let fortune = `You will be a ${job}.\n You will have ${children} children.\n ${future} is in your future.`
     return fortune
 }
 
