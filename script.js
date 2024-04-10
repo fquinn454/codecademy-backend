@@ -1,37 +1,46 @@
-let job;
-let future;
-let children;
+let opportunity;
+let noun;
+let verb;
 
-const jobs = ["doctor", "teacher", "laywer", "software engineer", "shop assistant", "nurse", "singer", "millionaire",]
-const futures = ["Happiness", "Change", "Uncertainty", "Money", "Long-life", "Health", "Ill-health", "Loneliness"]
+const opportunities = [
+    "new", "exciting", "unexpected", "lucrative",
+    "challenging", "romantic", "mysterious", "promising",
+    "fortunate", "interesting", "promising", "rewarding", "thrilling", 
+    "serendipitous", "fortuitous", "magical", "adventurous", "transformative"
+];
 
-function getRandom(arrayList){
+const nouns = [
+    "career", "relationship", "hobby", "passion", "dream", 
+    "goal", "quest", "aspiration", "path", "commitment", "friendship", 
+    "decision", "investment"
+];
+
+const verbs = [
+    "embracing", "exploring", "seeking", "pursuing", "encountering",
+    "accepting", "welcoming", "indulging", "discovering"
+];
+
+function getRandom(arrayList) {
     return Math.floor(Math.random() * arrayList.length);
 }
 
-function getFortune(jobs, futures){
-    job = jobs[getRandom(jobs)];
-    future = futures[getRandom(futures)];
-    children = Math.floor(Math.random() * 8);
-    if(children === 1){
-        let fortune = `You will be a ${job}.\n You will have ${children} child.\n ${future} is in your future.`
-        return fortune
-    }
-    let fortune = `You will be a ${job}.\n You will have ${children} children.\n ${future} is in your future.`
-    return fortune
+function getFortune(opportunities, nouns, verbs) {
+    const opportunity = opportunities[getRandom(opportunities)];
+    const noun = nouns[getRandom(nouns)];
+    const verb = verbs[getRandom(verbs)];
+    const fortune = `You will encounter ${opportunity} opportunities today.\n
+    Your ${noun} will bring you joy and fulfillment.\n
+    Be open to ${verb} new experiences: they will lead to growth.  `
+    
+    return fortune;
 }
 
-function changeWidthInPercentage(percentage) {
-    var fortuneParagraph = document.querySelector('div');
-    fortuneParagraph.style.display = "block";
-    fortuneParagraph.style.width = percentage + '%'; // Set the width to your desired percentage
-}
-
-function returnFortune(){
-    const fortuneParagraph = document.getElementById("fortune")
-    textToAdd = getFortune(jobs, futures);
+function returnFortune() {
+    const fortuneParagraph = document.getElementById("fortune");
+    const textToAdd = getFortune(opportunities, nouns, verbs);
     fortuneParagraph.innerText = textToAdd;
     const fortuneParagraphDiv = document.querySelector('div');
     fortuneParagraphDiv.style.display = "block";
 }
+
 
